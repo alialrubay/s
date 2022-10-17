@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+
+
+{% block body %}
+
+<div class="container">
+    {% include 'navbar_and_footer/navbar.html' %}
+</div>
+
+<!-- start card book  -->
+<div class="container">
+    <!-------------------------------------------- start book room  -->
+    <section>
+        <div class="row align-items-center mb-5 " style="margin-top:80px;">
+            <!-- start book img  -->
+            {% for book in book_photo|slice:'0:1' %}
+            <div class="col-lg-6">
+                <div class="">
+                    <img class="img-fluid " src="{{book.img.url}}" alt="" />
+                </div>
+            </div>
+            {% endfor %}
+            <!-- end book img  -->
+
+            <!--start book text  -->
+            {% for book in book_photo|slice:'0:1' %}
+            <div class="col-lg-5 mb-4 text-center text-md-start">
+                <div class="text">
+                    <h1 class="display-4 ali-texr">{{book.title}}</h1>
+                    <p class="text-black-50 fs-2 ">{{book.description}}
+                    </p>
+                    <p class="card-text"><small class="text-muted">By artist Marianne</small></p>
+                </div>
+                <a href="" class="btn btn-outline-dark mt-3">
+                    Read More...
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+        <!-- end book text  -->
+
+    </section>
+    <!-------------------------------------------- end book room  -->
+</div>
+<!-- end card book  -->
+
+
+
+<!--------------------------------------------- start pictures  -->
+<div class="row pb-5" style="background-color:black;margin:0px;">
+
+
+    <p class="text-center text-white text-capitalize fs-3 fst-italic mt-5 mb-5 pb-5">wish You Enjoy My Pictures</p>
+    {% for pic in pictures %}
+    <div class="col-md-3 ">
+        <div class="gallery ">
+            <a href="{{pic.img.url}}" data-lightbox="example-set"
+                data-title="Click the right half of the image to move forward.">
+                <img src="{{pic.img.url}}" alt="Mountains">
+            </a>
+
+        </div>
+    </div>
+    {% endfor %}
+
+
+
+</div>
+
+<!--------------------------------------------- end  pictures  -->
+
+
+
+
+
+
+
+{% endblock body %}

@@ -1,0 +1,43 @@
+<style>
+    .ali-navbar-toggler:focus {
+        border-color: white;
+        box-shadow: none !important;
+    }
+
+    .m-logo {
+        width: 150px;
+        margin: 0;
+
+    }
+</style>
+
+<nav class="navbar navbar-expand-lg ">
+
+    <div class="container-fluid">
+        <img src="../../static/img/logo.png" class=" m-logo  navbar-brand" alt="">
+
+        <button class="navbar-toggler ali-navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse " id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="{% url 'home_page' %}">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'display_pictures' %}">Pictures</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'about' %}">about</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'admin' %}">admin</a>
+                </li>
+
+        </div>
+
+    </div>
+</nav>
+<hr>

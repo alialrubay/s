@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Tangerine&display=swap');
+
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.ali-about-me-googlefonte {
+    font-family: 'Tangerine', cursive;
+}
+
+
+
+.ali-imd {
+    margin: 0px;
+
+}
+
+
+/* start gallry */
+
+
+div.gallery img {
+    width: 100%;
+    /* height: auto; */
+    height: 300px;
+    filter: grayscale();
+    transition: all 0.2s linear;
+    margin: 0px;
+}
+
+div.gallery img:hover {
+
+    filter: none;
+}
+
+/* end gallry */
+
+
+
+
+/* start  */
+.div {
+    background-color: black;
+}
+
+
+
+
+/* end  */
